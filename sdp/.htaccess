@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Secure Content"
+AuthUserFile /home/philippines01/www/philidev/sdp-corporate_2/.htpasswd
+require valid-user
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://philidev.softnext.co.jp/sdp-corporate_2/$1 [R,L]

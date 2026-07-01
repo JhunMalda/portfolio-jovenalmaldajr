@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" /><title>お問合せ | KOJIMA PAINT</title><meta name="description" content="" /><meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="icon" href="../img/favicon-192x192.png" sizes="48x48" type="image/png" media="all" />
+    <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon.png" type="image/png" media="all" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="../mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="../loader/loader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/top.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lower.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="contact">
+    <!-- Sparkle Canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-wrap">
+          <img src="../img/kp-logo.png" alt="小島塗装店ロゴ" style="height:72px;width:auto;" onerror="this.style.display='none'">
+          <div>
+            <div class="logo-text-main">小島塗装店</div>
+            <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+          </div>
+        </a><nav>
+          <a href="../service/index.html">塗装サービス</a>
+          <a href="../company/index.html">会社概要</a>
+          <a href="../painting-guide/index.html">塗替えの知識</a>
+          <a href="../contact/index.html">お問合せ</a>
+        </nav><a href="../recruit/index.html" class="btn-recruit">採用情報</a>
+        <button class="mobile-menu-btn" id="menu-btn" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="../service/index.html" onclick="closeMobileNav()">塗装サービス</a>
+      <a href="../company/index.html" onclick="closeMobileNav()">会社概要</a>
+      <a href="../painting-guide/index.html" onclick="closeMobileNav()">塗替えの知識</a>
+      <a href="../contact/index.html" onclick="closeMobileNav()">お問合せ</a>
+      <a href="../recruit/index.html" onclick="closeMobileNav()">採用情報</a>
+    </div>
+<link rel="stylesheet" href="../css/add.css" />
+
+<main class="sub">
+  <article>
+    <div class="lower-mv" style="background-image: url(../img/contact/mv.png); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="inner">
+        <h2>
+            <span>CONTACT</span>
+            お問合せ
+        </h2>
+        <p>工事のお見積依頼、お問い合わせは、<br>こちらで受付しております。</p>
+    </div>
+</div>
+    <section class="sub_contact px py">
+      <div class="inner">
+        <div class="text-center">
+          <h2>お問い合わせフォーム</h2>
+          <p class="sub_ttl">下記のお見積依頼書、お問い合わせは、下記にてお受けております。</p>
+          <p class="must">※は必須項目です。</p>
+        </div>
+        <link rel="stylesheet" href="../mfp.statics/mailformpro.css">
+<div class="contact-block">
+  <form class="contact-form" id="mailformpro" action="../mailformpro/mailformpro.cgi" method="POST">
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          お問い合わせ種別
+        </label>
+
+        <select name="お問い合わせ種別" required>
+          <option value="">選択してください</option>
+          <option value="塗装のお見積り">塗装のお見積り</option>
+          <option value="塗装のお問い合わせ">塗装のお問い合わせ</option>
+          <option value="採用に関するお問合せ">採用に関するお問合せ</option>
+          <option value="その他">その他</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          お問い合わせ内容
+        </label>
+        <textarea name="お問い合わせの内容" required></textarea>
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          お名前（漢字）
+        </label>
+        <input type="text" name="お名前（漢字）" required placeholder="山田 太郎">
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          お名前（フリガナ）
+        </label>
+        <input type="text" name="お名前（フリガナ）" required placeholder="ヤマダ タロウ">
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          E-Mail
+        </label>
+        <input type="text" name="E-Mail" required placeholder="example@email.com">
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label class="required">
+          電話番号（半角）
+        </label>
+        <input type="text" name="電話番号（半角）" required placeholder="025-523-5679">
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label>
+          FAX番号（半角）
+        </label>
+        <input type="text" name="FAX番号（半角）" placeholder="025-523-5195">
+      </div>
+    </div>
+    <!-- <div class="privacy-box">
+      <p>
+        お客様からお預かりした個人情報は、
+        お問い合わせへの回答、サービスのご案内のみに使用します。
+      </p>
+      <label class="privacy-check">
+        <input type="checkbox" name="プライバシーポリシーに同意" required>
+        プライバシーポリシーに同意する
+      </label>
+    </div> -->
+    <div class="submit-area">
+      <button type="submit">
+        <img src="../img/contact/icon01.png" alt="icon01">
+        送信
+      </button>
+    </div>
+  </form>
+  <script id="mfpjs" src="../mailformpro/mailformpro.cgi" charset="UTF-8">
+  </script>
+</div>
+      </div>
+      <!-- //inner -->
+    </section>
+    <div class="sub_contact lower_sec px py">
+      <div class="inner">
+        <h2 class="section_ttl">事業所</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h2><img src="../img/contact/icon02.png">本社</h2>
+
+            <p>〒004-0074<br>北海道札幌市厚別区厚別北4条4丁目3-5</p>
+            <p>TEL: 011-893-1986<br>FAX: 011-556-2085</p>
+          </div>
+
+          <div class="card">
+            <h2><img src="../img/contact/icon02.png">上越本店</h2>
+
+            <p>〒943-0828<br>新潟県上越市北本町2-1-26</p>
+            <p>TEL: 025-523-5679<br>FAX: 025-523-5195</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //sub-contact -->
+  </article>
+</main>
+<!-- main -->
+
+    <div id="page_top"><a href="#"></a></div>
+    
+    <footer>
+      <div class="container">
+        <div class="footer-grid" data-reveal="fade-up">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo-wrap" style="margin-bottom:1rem;">
+              <img src="../img/kp-logo__1_.jpg" alt="ロゴ" style="height:48px;width:auto;object-fit:contain;border-radius:4px;" onerror="this.style.display='none'">
+              <div>
+                <div class="logo-text-main">小島塗装店</div>
+                <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <h4>本社</h4>
+            <div class="footer-address">
+              <p><img src="../img/icon06.png" alt="icon06"><span>〒004-0074<br>北海道札幌市厚別区厚別北4条4丁目3-5</span></p>
+              <p><img src="../img/icon07.png" alt="icon07"><span>TEL: 011-893-1986</span></p>
+              <p><img src="../img/icon08.png" alt="icon08"><span>FAX: 011-556-2085</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>上越本店</h4>
+            <div class="footer-address">
+              <p><img src="../img/icon06.png" alt="icon06"><span>〒943-0828<br>新潟県上越市北本町2丁目1-26</span></p>
+              <p><img src="../img/icon07.png" alt="icon07"><span>TEL: 025-523-5679</span></p>
+              <p><img src="../img/icon08.png" alt="icon08"><span>FAX: 025-523-5195</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>メニュー</h4><nav>
+              <a href="../service/index.html">塗装サービス</a>
+              <a href="../company/index.html">会社概要</a>
+              <a href="../painting-guide/index.html">塗替えの知識</a>
+              <a href="../recruit/index.html">採用情報</a>
+              <a href="../contact/index.html">お問合せ</a>
+              <a href="../privacy/index.html">プライバシーポリシー</a>
+            </nav></div>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 株式会社小島塗装店 KOJIMA PAINT Co., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- Javascript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script src="../js/functions.js"></script>
+      <script src="../loader/loader.js"></script>
+      <script src="../js/scroll-trigger.js"></script>
+      <script src="../js/animation.js"></script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>

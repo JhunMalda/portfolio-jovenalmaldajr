@@ -1,0 +1,132 @@
+@charset "UTF-8";
+:root {
+  --window-padding: 3%;
+  --vertical-window-padding: 60px;
+}
+
+.section_ttl {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.section_ttl span {
+  font-size: 16px;
+}
+
+.btn01 {
+  margin: 0 auto;
+  max-width: 190px;
+  font-size: 14px;
+}
+
+.top-about .inner {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.top-business .inner {
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer .inner {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer_logo {
+  width: 100%;
+  min-width: unset;
+  text-align: center;
+}
+
+.footer_logo a {
+  justify-content: center;
+}
+
+.footer .address {
+  margin-bottom: 0;
+}
+
+.footer_nav ul li {
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .footer_nav ul li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  body p {
+    font-size: 14px;
+  }
+
+  .mv_txt {
+    font-size: calc(2vw + 2vh + 1vmin);
+  }
+
+  .mv {
+    min-height: 60vh;
+  }
+
+  #about .lower-mv_bg {
+    background: url(../img/about/mv-sp.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #contact .lower-mv_bg {
+    background: url(../img/contact/mv-sp.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #privacy .lower-mv_bg {
+    background: url(../img/privacy/mv-sp.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #recruit .lower-mv_bg {
+    background: url(../img/recruit/mv-sp.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #business .lower-mv_bg {
+    background: url(../img/business/mv-sp.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .lower-mv_bg,
+  .lower-mv {
+    height: 70vh;
+    min-height: 70vh;
+  }
+
+  .lower-mv .inner .mv_text {
+    margin-bottom: 0;
+  }
+
+  #privacy .lower-mv .inner .mv_text {
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+}

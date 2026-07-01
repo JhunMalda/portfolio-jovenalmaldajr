@@ -1,0 +1,26 @@
+@charset "UTF-8";
+:root {
+  --window-padding: 3%;
+  --vertical-window-padding: 60px;
+}
+
+.sp {
+  display: block;
+}
+
+.pc {
+  display: none;
+}
+
+.top-about .inner, .top-business .inner {
+  max-height: unset;
+}
+
+.footer .inner {
+  gap: 40px;
+}
+
+.footer_logo {
+  width: 200px;
+  min-width: 160px;
+}

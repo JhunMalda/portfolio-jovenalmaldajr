@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Secure Content"
+AuthUserFile /home/philippines01/www/philidev/north-park_11ty_2/.htpasswd
+require valid-user
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://philidev.softnext.co.jp/north-park_11ty_2/$1 [R,L]

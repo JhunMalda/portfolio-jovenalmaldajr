@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" /><title>株式会社 小島塗装店 | KOJIMA PAINT</title><meta name="description" content="" /><meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="icon" href="./img/favicon-192x192.png" sizes="48x48" type="image/png" media="all" />
+    <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon.png" type="image/png" media="all" />
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="./mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/header.css" />
+    <link rel="stylesheet" type="text/css" href="./css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="./loader/loader.css" />
+    <link rel="stylesheet" type="text/css" href="./css/top.css" />
+    <link rel="stylesheet" type="text/css" href="./css/lower.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="top">
+    <!-- Sparkle Canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="./index.html" class="logo-wrap">
+          <img src="./img/kp-logo.png" alt="小島塗装店ロゴ" style="height:72px;width:auto;" onerror="this.style.display='none'">
+          <div>
+            <div class="logo-text-main">小島塗装店</div>
+            <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+          </div>
+        </a><nav>
+          <a href="./service/index.html">塗装サービス</a>
+          <a href="./company/index.html">会社概要</a>
+          <a href="./painting-guide/index.html">塗替えの知識</a>
+          <a href="./contact/index.html">お問合せ</a>
+        </nav><a href="./recruit/index.html" class="btn-recruit">採用情報</a>
+        <button class="mobile-menu-btn" id="menu-btn" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="./service/index.html" onclick="closeMobileNav()">塗装サービス</a>
+      <a href="./company/index.html" onclick="closeMobileNav()">会社概要</a>
+      <a href="./painting-guide/index.html" onclick="closeMobileNav()">塗替えの知識</a>
+      <a href="./contact/index.html" onclick="closeMobileNav()">お問合せ</a>
+      <a href="./recruit/index.html" onclick="closeMobileNav()">採用情報</a>
+    </div>
+<main id="site-content">
+  <article>
+    <!-- Hero Slider -->
+    <section class="hero">
+      <div class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="./img/kojima_top_1.png" alt="Hero 1" class="pc">
+          <img src="./img/kojima_top_1-sp.png" alt="Hero 4" class="sp">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="./img/kojima_top_2.png" alt="Hero 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="./img/kojima_top_3.png" alt="Hero 3">
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide">
+          <img src="./img/kojima_top_4.png" alt="Hero 4">
+        </div>
+        <!-- Slide 5 -->
+        <div class="slide">
+          <img src="./img/kojima_top_5.png" alt="Hero 4" class="pc">
+          <img src="./img/kojima_top_5-sp.png" alt="Hero 4" class="sp">
+        </div>
+      </div>
+      <!-- Static hero text overlay (outside slider) -->
+      <div class="hero-content">
+        <p class="since-tag">SINCE 1899</p>
+        <div class="hero-text">
+          <h1>Expert Painting <br> 125+ Years Strong</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal="fade-up">WHY CHOOSE US</div>
+          <h2 class="section-title" data-reveal="fade-up" data-delay="100">選ばれる理由</h2>
+        </div>
+        <div class="why-grid" data-reveal="fade-up" data-delay="100">
+          <div class="why-card">
+            <div class="why-icon"><img src="./img/icon01.png" alt="icon01"></div>
+            <h3>創業125年の実績</h3>
+            <p>北海道・新潟に根ざし、長年の信頼と豊富な施工実績があります。</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><img src="./img/icon02.png" alt="icon02"></div>
+            <h3>明朗会計・無料見積</h3>
+            <p>追加料金なし。丁寧な現地調査と分かりやすいお見積りを提供します。</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><img src="./img/icon03.png" alt="icon03"></div>
+            <h3>高品質な施工技術</h3>
+            <p>適切な塗料選定と熟練職人の技術で、長持ちする美しい仕上がりを実現。</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><img src="./img/icon04.png" alt="icon04"></div>
+            <h3>フォームで24時間受付</h3>
+            <p>思い立ったらすぐにご相談ください。営業時間内にできるだけ早くご回答いたします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal="fade-up">OUR SERVICES</div>
+          <h2 class="section-title" data-reveal="fade-up" data-delay="100">塗装サービス</h2>
+        </div>
+        <div class="services-grid">
+          <a href="./service/index.html#service_01" class="service-card" data-reveal="fade-left" data-delay="0">
+            <img src="./img/service/house_before_after.jpg" alt="外壁塗装 施工前後">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>外壁塗装</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_02" class="service-card" data-reveal="fade-up" data-delay="100">
+            <img src="./img/service_2.png" alt="屋根塗装">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>屋根塗装</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_03" class="service-card" data-reveal="fade-right" data-delay="200">
+            <img src="./img/service_3.png" alt="防水工事">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>防水工事</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_04" class="service-card" data-reveal="fade-left" data-delay="100">
+            <img src="./img/service_4-1.png" alt="鉄部・付帯塗装">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>鉄部・付帯塗装</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_05" class="service-card" data-reveal="fade-up" data-delay="200">
+            <img src="./img/service_5.png" alt="ひび割れ補修">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>ひび割れ補修</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_06" class="service-card" data-reveal="fade-right" data-delay="300">
+            <img src="./img/service_6.png" alt="コーキング打替">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>コーキング打替</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="./service/index.html#service_07" class="service-card" data-reveal="fade-left" data-delay="300">
+            <img src="./img/service/bridge_before_after.jpg" alt="橋梁塗装 施工前後">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-info">
+              <h3>橋梁塗装</h3>
+              <div class="service-more">詳しく見る <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="services-cta" data-reveal="fade-up">
+          <a href="./service/index.html" class="btn-outline-dark">サービスを詳しく見る <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal="fade-up">ABOUT US</div>
+          <h2 class="section-title" data-reveal="fade-up" data-delay="100">会社概要</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-img" data-reveal="fade-left">
+            <img src="./img/about_us.png" alt="職人の仕事">
+          </div>
+          <div>
+            <h3 class="about-text" data-reveal="fade-right" style="font-size:1.9rem;line-height:1.6;margin-bottom:1rem;">
+              誠実な仕事。<br>それが、職人の心。
+            </h3>
+            <p class="about-text" data-reveal="fade-right" data-delay="100" style="color:var(--stone);line-height:1.9;margin-bottom:2rem;font-size:.95rem;">
+              手を抜かない真面目な仕事が私たちのモットーです。一つひとつの工程に妥協せず、お客様の大切な住まいと真摯に向き合う。それが小島塗装店の職人としての誇りです。
+            </p>
+            <h3 class="about-text" data-reveal="fade-right" data-delay="150" style="font-size:1.9rem;line-height:1.6;margin-bottom:1rem;">
+              伝統と革新の融合。
+            </h3>
+            <p class="about-text" data-reveal="fade-right" data-delay="200" style="color:var(--stone);line-height:1.9;margin-bottom:2rem;font-size:.95rem;">
+              125年受け継がれてきた確かな技術を守りながら、新工法・新素材にも積極的に取り組んでいます。時代とともに進化し続けることで、常に最高の品質をお届けします。
+            </p>
+            <div data-reveal="fade-up" data-delay="300" class="company_btn">
+              <a href="./company/index.html" class="btn-outline-dark">会社概要を詳しく見る <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card" data-reveal="flip-up" data-delay="0">
+            <div class="stat-num">125</div>
+            <div class="stat-label">創業125年</div>
+            <p class="stat-desc">1899年の創業以来、地域に根ざした信頼の実績</p>
+          </div>
+          <div class="stat-card" data-reveal="flip-up" data-delay="150">
+            <div class="stat-num">2</div>
+            <div class="stat-label">拠点展開</div>
+            <p class="stat-desc">北海道・新潟の2拠点で地域密着のサービス</p>
+          </div>
+          <div class="stat-card" data-reveal="flip-up" data-delay="300">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">品質へのこだわり</div>
+            <p class="stat-desc">妥協なき施工で美しい仕上がりを実現</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section id="testimonial">
+      <div class="container">
+        <div class="quote-icon" data-reveal="zoom-in"><i class="fa-solid fa-quote-left"></i></div>
+        <p class="testimonial-quote" data-reveal="fade-up" data-delay="100">
+          「丁寧な対応で安心して任せられました。仕上がりも大満足です！」
+        </p>
+        <p class="testimonial-author" data-reveal="fade-up" data-delay="200">— 札幌市 S様</p>
+      </div>
+    </section>
+
+    <!-- Flow -->
+    <section id="flow">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal="fade-up">HOW IT WORKS</div>
+          <h2 class="section-title" data-reveal="fade-up" data-delay="100">ご依頼の流れ</h2>
+        </div>
+        <div class="flow-track">
+          <div class="flow-step" data-reveal="zoom-in" data-delay="0">
+            <div class="flow-circle">01</div>
+            <h3>お問合せ</h3>
+          </div>
+          <div class="flow-step" data-reveal="zoom-in" data-delay="100">
+            <div class="flow-circle">02</div>
+            <h3>現地調査</h3>
+          </div>
+          <div class="flow-step" data-reveal="zoom-in" data-delay="200">
+            <div class="flow-circle">03</div>
+            <h3>お見積り</h3>
+          </div>
+          <div class="flow-step" data-reveal="zoom-in" data-delay="300">
+            <div class="flow-circle">04</div>
+            <h3>施工開始</h3>
+          </div>
+          <div class="flow-step" data-reveal="zoom-in" data-delay="400">
+            <div class="flow-circle">05</div>
+            <h3>完工・保証</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruit -->
+    <section id="recruit">
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="section-label" data-reveal="fade-up">JOIN OUR TEAM</div>
+        <h2 class="section-title" data-reveal="fade-up" data-delay="100">一緒に働きませんか？</h2>
+        <p class="recruit-sub" data-reveal="fade-up" data-delay="200">
+          125年の歴史を持つ塗装会社で、技術と誇りを育てる仕事です。<br>
+          未経験歓迎・研修制度充実・資格取得支援あり。学生の方も大歓迎！
+        </p>
+        <div class="recruit-perks">
+          <div class="perk-card" data-reveal="fade-up" data-delay="0">
+            <img src="./img/icon05.png" alt="icon05">
+            <span>未経験歓迎</span>
+          </div>
+          <div class="perk-card" data-reveal="fade-up" data-delay="100">
+            <img src="./img/icon05.png" alt="icon05">
+            <span>資格取得支援</span>
+          </div>
+          <div class="perk-card" data-reveal="fade-up" data-delay="200">
+            <img src="./img/icon05.png" alt="icon05">
+            <span>完全週休2日</span>
+          </div>
+        </div>
+        <div class="recruit-btns" data-reveal="fade-up" data-delay="300">
+          <a href="./recruit/index.html" class="btn-white">採用情報を詳しく見る <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="./contact/index.html" class="btn-outline-white">採用エントリーはこちら <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-label" data-reveal="fade-up" style="text-align:center;">CONTACT</div>
+        <h2 class="section-title" data-reveal="fade-up" data-delay="100" style="text-align:center;">まずはお気軽にご相談ください</h2>
+        <p class="contact-sub" data-reveal="fade-up" data-delay="200">
+          外壁・屋根の状態が心配な方、見積もりだけでもOKです。<br>
+          地域密着125年の専門家が丁寧にご対応します。
+        </p>
+        <div class="contact-btns" data-reveal="fade-up" data-delay="300">
+          <a href="./contact/index.html" class="btn-dark"><i class="fa-solid fa-envelope"></i> 塗装工事のお問合せはこちら</a>
+          <a href="tel:0120-88-5679" class="btn-outline-dark"><i class="fa-solid fa-phone"></i> TEL: 0120-88-5679</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+    <div id="page_top"><a href="#"></a></div>
+    
+    <!-- loader-bg -->
+    <link rel="stylesheet" href="./loader-bg/loader.css">
+    <div id="loader-bg">
+      <div id="loader">
+        <img src="./loader/loader_logo.png" alt="Loading..." />
+        <div class="loadingBar" id="loadingBar"></div>
+      </div>
+    <script src="./loader/loader.js"></script>
+    <script src="./loader/progressbar.js"></script>
+    </div>
+    
+    <footer>
+      <div class="container">
+        <div class="footer-grid" data-reveal="fade-up">
+          <div class="footer-brand">
+            <a href="./index.html" class="logo-wrap" style="margin-bottom:1rem;">
+              <img src="./img/kp-logo__1_.jpg" alt="ロゴ" style="height:48px;width:auto;object-fit:contain;border-radius:4px;" onerror="this.style.display='none'">
+              <div>
+                <div class="logo-text-main">小島塗装店</div>
+                <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <h4>本社</h4>
+            <div class="footer-address">
+              <p><img src="./img/icon06.png" alt="icon06"><span>〒004-0074<br>北海道札幌市厚別区厚別北4条4丁目3-5</span></p>
+              <p><img src="./img/icon07.png" alt="icon07"><span>TEL: 011-893-1986</span></p>
+              <p><img src="./img/icon08.png" alt="icon08"><span>FAX: 011-556-2085</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>上越本店</h4>
+            <div class="footer-address">
+              <p><img src="./img/icon06.png" alt="icon06"><span>〒943-0828<br>新潟県上越市北本町2丁目1-26</span></p>
+              <p><img src="./img/icon07.png" alt="icon07"><span>TEL: 025-523-5679</span></p>
+              <p><img src="./img/icon08.png" alt="icon08"><span>FAX: 025-523-5195</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>メニュー</h4><nav>
+              <a href="./service/index.html">塗装サービス</a>
+              <a href="./company/index.html">会社概要</a>
+              <a href="./painting-guide/index.html">塗替えの知識</a>
+              <a href="./recruit/index.html">採用情報</a>
+              <a href="./contact/index.html">お問合せ</a>
+              <a href="./privacy/index.html">プライバシーポリシー</a>
+            </nav></div>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 株式会社小島塗装店 KOJIMA PAINT Co., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- Javascript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script src="./js/functions.js"></script>
+      <script src="./loader/loader.js"></script>
+      <script src="./js/scroll-trigger.js"></script>
+      <script src="./js/animation.js"></script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>

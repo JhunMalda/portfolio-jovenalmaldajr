@@ -1,0 +1,284 @@
+@charset "UTF-8"; /* mailform pro用 追加css */
+.contact-contents {
+  padding: 30px 3%;
+  width: 50%;
+}
+
+.conbox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
+.conbox .subttl {
+  line-height: 1;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+}
+
+.conbox .subttl span {
+  font-size: 18px;
+  text-align: left;
+}
+
+.contact__form {
+  display: block;
+}
+
+form#mailformpro {
+  width: 100%;
+  padding: 0;
+}
+
+.sub-contact {
+  background: url(../img/sub-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contact__form table {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  border-collapse: unset;
+  border-spacing: unset;
+  padding: 0;
+}
+
+.entry-contents .contact__form tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-contents .contact__form th {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  padding: 0;
+  font-size: 14px;
+  position: relative;
+  vertical-align: top;
+  border: none;
+  border-bottom: none;
+  vertical-align: middle;
+}
+
+.entry-contents .contact__form th.textarea_ttl {
+  vertical-align: top;
+}
+
+.entry-contents .contact-block .must {
+  display: none;
+  background: #dc1432;
+  color: #fff;
+  font-size: 10px;
+  padding: 7px 7px;
+  position: relative;
+  left: 0;
+  line-height: 1;
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+  margin: 0 7px 0 0;
+}
+
+.entry-contents .contact-block .must.hide {
+  opacity: 0;
+}
+
+.contact__form td {
+  padding: 20px 0;
+  border: none;
+  border-bottom: none;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.contact__form td ul {
+  padding: 0;
+  margin: 0;
+}
+
+.contact__form td ul li {
+  list-style: none;
+}
+
+.checkblock label {
+  background-color: #98989883;
+  padding: 2px 5px;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100% !important;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  min-height: 100px !important;
+}
+
+.contact-block p {
+}
+
+.contact__form .center {
+  text-align: left;
+}
+
+.contact__form p {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+.contact__form p a {
+  color: #025daf !important;
+  text-decoration: underline;
+}
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+.contact__form .btn {
+  max-width: 250px;
+  width: 100%;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+  margin: 0 auto;
+  color: #000;
+  background-color: var(--main-color);
+}
+
+.contact__form .btn:hover {
+  opacity: 0.6;
+}
+
+.contact-block {
+  margin: 40px 0 0;
+  padding: 20px 3%;
+  width: 100%;
+}
+
+.contact-block .container {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.entry-contents {
+  width: 100%;
+}
+
+.contact__sec {
+  width: 100%;
+}
+
+.contact-block p {
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact-block p span {
+  display: inline-block;
+  position: relative;
+  float: none;
+  padding: 2px 6px;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .conbox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .conbox p br {
+    display: none;
+  }
+
+  .conbox {
+    text-align: center;
+  }
+
+  .conbox .subttl {
+    flex-direction: column;
+  }
+
+  .contact__form .center,
+  .contact-block p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .entry-contents .contact__form th {
+    width: 100%;
+    float: none;
+    display: block;
+    border: none;
+    padding: 20px 0px 0 0px;
+  }
+
+  .entry-contents .contact__form th .must {
+    left: 10px;
+    left: 0;
+    position: relative;
+    margin: 0 10px 0 0;
+  }
+
+  .contact__form td {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+  .entry-contents .contact-block .must.hide {
+    opacity: 0;
+    display: none;
+  }
+
+  .conbox .subttl span br {
+    display: none;
+  }
+}

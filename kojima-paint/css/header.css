@@ -1,0 +1,78 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #111111;
+  --ash:    #f4f3f1;
+  --stone:  #6b6b6b;
+  --accent: #1a3a5c;
+  --gold:   #c9a84c;
+  --white:  #ffffff;
+  --serif:  'Noto Serif JP', serif;
+  --sans:   'Noto Sans JP', sans-serif;
+  --amiri:  'Amiri';
+  --garamond:  'EB Garamond';
+  --co-garamond:  'Cormorant Garamond';
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--sans); color: var(--ink); background: var(--white); overflow-x: hidden; }
+
+/* ─── SPARKLE CANVAS ─── */
+#sparkle-canvas {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .35;
+}
+
+/* ─── HEADER ─── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  transition: box-shadow .3s;
+}
+header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.1); }
+.header-inner {
+  max-width: unset;
+  margin: 0 auto;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 20px;
+}
+.logo-wrap { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: inherit; width: 50%; }
+.logo-wrap img { height: 48px; width: auto; object-fit: contain; }
+.logo-text-main { font-size: 1.2rem; font-weight: 700; color: var(--ink); }
+.logo-text-sub  { font-size: .65rem; color: var(--stone); letter-spacing: .06em; }
+nav { 
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: end;
+}
+nav a { font-size: .9rem; color: var(--stone); text-decoration: none; transition: color .2s; position: relative; padding-bottom: 2px; }
+nav a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--ink); transition:width .3s; }
+nav a:hover { color: var(--ink); }
+nav a:hover::after { width: 100%; }
+.btn-recruit {
+  background: var(--ink);
+  color: var(--white);
+  padding: .65rem 1.5rem;
+  border-radius: 4px;
+  font-size: .85rem;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+  width: 100%;
+  max-width: 120px;
+  text-align: center;
+}
+.btn-recruit:hover { background: var(--accent); transform: translateY(-1px); }
+.mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--ink); transition: all .3s; }
+
+@media (max-width: 568px) {
+  .logo-wrap {
+    width: 100%;
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JRM.dev</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --mid: #555;
+    --light: #999;
+    --rule: #e2e2e2;
+    --accent: #2563eb;
+    --bg: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 13.5px;
+    line-height: 1.65;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 0 32px;
+  }
+
+  /* HEADER */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+
+  .persona {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: url(./person.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+  }
+
+  .persona:hover {
+    background: url(./person2.png);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+  }
+
+  .name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .title-tag {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 6px;
+  }
+
+  .contact {
+    text-align: right;
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+
+  .contact a { color: var(--accent); text-decoration: none; }
+
+  /* LAYOUT */
+  .body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 40px;
+  }
+
+  /* SIDEBAR */
+  .sidebar { border-right: 1px solid var(--rule); padding-right: 32px; }
+
+  /* MAIN */
+  .main { }
+
+  /* SECTION */
+  .section { margin-bottom: 28px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* SKILLS */
+  .skill-group { margin-bottom: 14px; }
+  .skill-group-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .skill-pill {
+    font-size: 11.5px;
+    color: var(--mid);
+    background: #f4f4f4;
+    border-radius: 3px;
+    padding: 2px 8px;
+  }
+
+  /* LANGUAGES */
+  .lang-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); margin-bottom: 5px; }
+  .lang-row span:first-child { color: var(--ink); font-weight: 500; }
+
+  /* EDUCATION */
+  .edu-school { font-weight: 600; font-size: 13px; color: var(--ink); }
+  .edu-degree { font-size: 12px; color: var(--mid); margin-top: 2px; }
+  .edu-year { font-size: 11px; color: var(--light); margin-top: 2px; }
+  .separator {
+    margin-bottom: 10px;
+  }
+
+  /* SUMMARY */
+  .summary { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+  /* EXPERIENCE */
+  .job { margin-bottom: 22px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .job-title { font-weight: 600; font-size: 14px; color: var(--ink); }
+  .job-date { font-size: 11.5px; color: var(--light); white-space: nowrap; }
+  .job-company { font-size: 12.5px; color: var(--accent); margin-top: 1px; font-weight: 500; }
+  .job-bullets { margin-top: 8px; padding-left: 16px; }
+  .job-bullets li {
+    font-size: 12.5px;
+    color: var(--mid);
+    margin-bottom: 4px;
+    list-style: disc;
+  }
+
+  /* PROJECTS */
+  .project { margin-bottom: 16px; }
+  .project-name { font-weight: 600; font-size: 13px; color: var(--ink); }
+  .project-tech { font-size: 11px; color: var(--accent); margin: 2px 0; }
+  .project-desc { font-size: 12.5px; color: var(--mid); }
+
+  /* PRINT */
+  @media print {
+    body { font-size: 12px; }
+    .page { margin: 24px auto; }
+  }
+
+  @media (max-width: 600px) {
+    .body { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--rule); padding-right: 0; padding-bottom: 20px; margin-bottom: 20px; }
+    header { grid-template-columns: 1fr; }
+    .contact { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="persona"></div>
+      <div class="name">Jovenal R. Malda Jr.</div>
+      <div class="title-tag">Front End Developer</div>
+    </div>
+    <div class="contact">
+      <div>📍Caloocan City, Philippines</div>
+      <div>jovenalmalda@gmail.com</div>
+      <div>+63 998 388 4403</div>
+      <div><a href="https://github.com/JhunMalda" target="_blank">github.com/JhunMalda</a></div>
+      <div><a href="https://github.com/jhunsoftnext" target="_blank">github.com/jhunsoftnext</a></div>
+      <div><a href="https://www.linkedin.com/in/jovenal-jr-malda/" target="_blank">linkedin.com/in/jovenal-jr-malda</a></div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="section">
+        <div class="section-label">Core Skills</div>
+        <div class="skill-group">
+          <div class="skill-group-name">Languages</div>
+          <div class="skill-list">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Styling</div>
+          <div class="skill-list">
+            <span class="skill-pill">SASS/SCSS</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Flexbox</span>
+            <span class="skill-pill">CSS Grid</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Tools</div>
+          <div class="skill-list">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Figma</span>
+            <span class="skill-pill">npm</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Other</div>
+          <div class="skill-list">
+            <span class="skill-pill">Responsive Design</span>
+            <span class="skill-pill">Cross-browser</span>
+            <span class="skill-pill">Accessibility</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Education</div>
+        <div class="edu-school">Bachelor of Science<br>in Information Technology</div>
+        <div class="edu-degree">Our Lady of Fatima University</div>
+        <div class="edu-year">Graduated 2019</div>
+        <!-- <div class="separator"></div>
+        <div class="edu-school">Highschool</div>
+        <div class="edu-degree">Amparo High School</div>
+        <div class="edu-year">Graduated 2015</div>
+        <div class="separator"></div>
+        <div class="edu-school">Elementary</div>
+        <div class="edu-degree">Amparo Elementary SChool</div>
+        <div class="edu-year">Graduated 2011</div> -->
+      </div>
+
+      <div class="section">
+        <div class="section-label">Languages</div>
+        <div class="lang-row"><span>Filipino</span><span>Native</span></div>
+        <div class="lang-row"><span>English</span><span>Intermediate</span></div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="section">
+        <div class="section-label">Profile</div>
+        <p class="summary">
+          Front End Developer with 3+ years of hands-on experience building responsive, accessible web interfaces using HTML, CSS, and JavaScript. Passionate about writing clean, maintainable code and translating design concepts into smooth, pixel-perfect experiences. Comfortable working independently or in a team environment.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Front End Developer</div>
+            <div class="job-date">Feb 2022 – July 2026</div>
+          </div>
+          <div class="job-company">Softnext · Full-time</div>
+          <ul class="job-bullets">
+            <li>Built and maintained responsive web pages using HTML5, CSS3, and JavaScript.</li>
+            <li>Translated Figma designs into pixel-perfect, cross-browser-compatible interfaces while ensuring compliance with WCAG accessibility standards.</li>
+            <li>Improved page load performance by optimizing assets, implementing lazy loading for images, and refactoring CSS.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Public Assistant and Complaint Desk</div>
+            <div class="job-date">August 2019 – May 2021</div>
+          </div>
+          <div class="job-company">Land Transportation Franchising and Regulatory Board · Full-time</div>
+          <ul class="job-bullets">
+            <li>Administrative Aide</li>
+            <li>Front Desk Support, Communicating with Franchise Holders</li>
+            <li>Responding to Customer Complaints via Phone Calls and Facebook Messages</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <div class="section-label">Reference</div>
+
+        <div class="project">
+          <div class="project-name">Ben Justin Blacer</div>
+          <div class="project-tech">+63 961 732 8762</div>
+          <div class="project-tech">bablacer@up.edu.ph</div>
+          <div class="project-desc">Sirius Online Learning<br>Director of Studies</div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

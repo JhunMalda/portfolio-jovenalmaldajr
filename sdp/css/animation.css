@@ -1,0 +1,47 @@
+/* === BLOCK ANIMATIONS === */
+.animate-right,
+.animate-left {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate-right {
+  transform: translateX(-100px);
+}
+.animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-left {
+  transform: translateX(100px);
+}
+.animate-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-text span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* For the show-all element */
+.animate-show {
+  opacity: 0;
+  animation: showFadeIn 1.5s forwards;
+  animation-delay: 0.2s; /* waits 1s before showing */
+}
+
+@keyframes showFadeIn {
+  to {
+    opacity: 1;
+  }
+}

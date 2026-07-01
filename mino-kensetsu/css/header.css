@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Hiragino-kaku-gothic-pron";
+  src: url(../_site/fonts/Hiragino-Kaku-Gothic-ProN.otf);
+}
+
+/* header-globals */
+:root {
+  --header-inner: 1600px;
+  --header-pd: 50px;
+  --hide-pc: none;
+  --header-height: 80px;
+}
+
+.hide-pc {
+  display: none;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  z-index: 10;
+  height: 80px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  padding: 10px 3%;
+}
+
+.header-main_sub {
+  background-color: #fff;
+}
+
+.header_logo {
+  display: flex;
+  /* font-family: "Hiragino-kaku-gothic-pron";
+  color: #000; */
+}
+
+.header_logo .logo-hide {
+  display: none;
+}
+
+.header-main.active {
+  filter: drop-shadow(0px 0px 3px black);
+  transition: 0.5s;
+  background-color: #fff;
+}
+
+.header-main.active .header_logo .logo-hide {
+  display: block;
+  transition: 0.5s;
+}
+
+.header-main.active .header_logo .logo-show {
+  display: none;
+  transition: 0.5s;
+}
+
+.header-main.active .header-nav .link-wrap a {
+  color: #000;
+  transition: 0.5s;
+}
+
+.header-main .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  padding: 0;
+}
+
+.header-main .nav-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+}
+
+.header-main .header-nav .link-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.header-main .header-nav .link-wrap a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-weight: 600;
+  position: relative;
+  font-family: var(--font-family1);
+}
+
+.header-main .header-nav .link-wrap .link-item-sub a {
+  color: #000;
+}
+
+.header-main .header-nav .link-wrap a span {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: var(--font-family3);
+  font-weight: 400;
+}
+
+.header-main .header-nav .link-wrap a::before {
+  content: "";
+  border-bottom: solid 2px var(--color-green);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.5s;
+}
+
+.header-main .header-nav .link-wrap a:hover::before {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.header-main .header-nav .link-wrap .link-item {
+  width: fit-content;
+}
+
+.header_logo img {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1500px) {
+  .header-main .nav-box {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header-main .header-nav .link-wrap {
+    gap: 15px;
+  }
+
+  .header-main .header-nav .link-wrap .link-item {
+    width: fit-content;
+  }
+
+  .header-main .header-nav .link-wrap a span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .header-main .header-nav .link-wrap {
+    gap: 10px;
+  }
+
+  .header-main .header-nav .link-wrap a {
+    font-size: 14px;
+  }
+
+  .header_logo img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header-main .nav-box {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 77px;
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 20px;
+    height: fit-content;
+    gap: 0;
+  }
+
+  .header-main .header-nav .link-wrap {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .header-main .header-nav .link-wrap .link-item {
+    width: 100%;
+    padding: 10px 1%;
+  }
+
+  .header-main .header-nav .link-wrap li.pc {
+    display: none;
+  }
+
+  .header-main .header-nav .link-wrap a {
+    color: #000;
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-main .inner .link-item.sp {
+    color: var(--color-green);
+    padding: 0 1%;
+  }
+
+  .header_logo img {
+    width: 200px;
+  }
+
+  .header_logo {
+    width: 100%;
+  }
+
+  .sp-menu.hide-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    width: 60px;
+    min-width: 60px;
+    height: 100%;
+    background-color: transparent;
+    transition: 0.5s ease;
+  }
+
+  .sp-menu span {
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color01);
+    transition: 0.5s ease;
+  }
+
+  .sp-menu.active {
+    gap: 0;
+  }
+
+  .sp-menu.active span:nth-of-type(1) {
+    transform: rotate(-45deg);
+  }
+
+  .sp-menu.active span:nth-of-type(2) {
+    display: none;
+  }
+
+  .sp-menu.active span:nth-of-type(3) {
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+
+  .header-main .header-nav .link-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header__navi--box.flex {
+    display: none;
+    background: white;
+    padding-top: var(--half-padding);
+  }
+
+  .header .sp-menu.sp span {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #000;
+    position: absolute;
+    left: 0;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .header .sp-menu.sp {
+    height: 25px;
+    width: 25px;
+    margin: 0 3% 0 0;
+    position: relative;
+  }
+
+  .header .sp-menu.sp span:nth-child(1) {
+    top: 4px;
+  }
+
+  .header .sp-menu.sp span:nth-child(2) {
+    top: 12px;
+  }
+
+  .header .sp-menu.sp span:nth-child(3) {
+    bottom: 3px;
+  }
+
+  .header__navi--list {
+    padding: 20px 3% 20px;
+  }
+
+  .header__navi--box {
+    position: absolute;
+    top: 60px;
+    background: #fff;
+    display: none;
+    width: 100%;
+  }
+
+  .header_logo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-main {
+    width: 100.1%;
+    left: 49.9%;
+  }
+
+  .header-main .nav-box {
+    width: 100.1%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .header_logo {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sp-menu.hide-pc {
+    width: 50px;
+    min-width: 50px;
+  }
+}

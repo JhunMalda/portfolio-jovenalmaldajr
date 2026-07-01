@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" /><title>会社概要 | KOJIMA PAINT</title><meta name="description" content="" /><meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="icon" href="../img/favicon-192x192.png" sizes="48x48" type="image/png" media="all" />
+    <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon.png" type="image/png" media="all" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="../mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="../loader/loader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/top.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lower.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="flow">
+    <!-- Sparkle Canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-wrap">
+          <img src="../img/kp-logo.png" alt="小島塗装店ロゴ" style="height:72px;width:auto;" onerror="this.style.display='none'">
+          <div>
+            <div class="logo-text-main">小島塗装店</div>
+            <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+          </div>
+        </a><nav>
+          <a href="../service/index.html">塗装サービス</a>
+          <a href="../company/index.html">会社概要</a>
+          <a href="../painting-guide/index.html">塗替えの知識</a>
+          <a href="../contact/index.html">お問合せ</a>
+        </nav><a href="../recruit/index.html" class="btn-recruit">採用情報</a>
+        <button class="mobile-menu-btn" id="menu-btn" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="../service/index.html" onclick="closeMobileNav()">塗装サービス</a>
+      <a href="../company/index.html" onclick="closeMobileNav()">会社概要</a>
+      <a href="../painting-guide/index.html" onclick="closeMobileNav()">塗替えの知識</a>
+      <a href="../contact/index.html" onclick="closeMobileNav()">お問合せ</a>
+      <a href="../recruit/index.html" onclick="closeMobileNav()">採用情報</a>
+    </div>
+
+<main class="sub">
+  <article>
+    <div class="lower-mv flow_lowermv" style="background-image: url(../img/flow/mv.png); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="inner">
+        <h3>無料診断実施中</h3>
+        <h1>
+            外壁塗装の<br>
+            <span>タイミング</span>、<br>
+            わかります！
+        </h1>
+        <h2>125年の実績で、あなたのお住まいを<br>
+            プロの目で無料診断いたします</h2>
+
+        <div class="btns">
+            <a href="#diagnosis"><img src="../img/flow/icon01.png" alt="icon01">1分で診断スタート</a>
+            <a href="tel:0120-88-5679"><img src="../img/flow/icon02.png" alt="icon02">0120-88-5679</a>
+        </div>
+    </div>
+</div>
+    <section class="sub_flow guidelines grad_bg px py">
+        <div class="inner">
+            <div class="section-header">
+                <h2 class="section-title" data-reveal="fade-up" data-delay="100">築年数別 塗装目安</h2>
+                <p data-reveal="fade-up" data-delay="200">一般的な住宅の場合の塗り替え時期</p>
+            </div>
+            <div class="cards" data-reveal="fade-up" data-delay="200">
+                <div class="card">
+                    <img src="../img/flow/guide_icon01.png" alt="guide_icon01">
+                    新築
+                    <span class="green">安心</span>
+                </div>
+                <div class="card">
+                    <img src="../img/flow/guide_icon02.png" alt="guide_icon01">
+                    5年
+                    <span class="green">良好</span>
+                </div>
+                <div class="card">
+                    <img src="../img/flow/guide_icon03.png" alt="guide_icon01">
+                    7-10年
+                    <span class="yellow">検討時期</span>
+                </div>
+                <div class="card">
+                    <img src="../img/flow/guide_icon04.png" alt="guide_icon01">
+                    12-15年
+                    <span class="orange">要注意</span>
+                </div>
+                <div class="card">
+                    <img src="../img/flow/guide_icon05.png" alt="guide_icon01">
+                    15年以上
+                    <span class="red">早急対応</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sub_flow signs px py">
+        <div class="inner">
+            <div class="section-header">
+                <h3 class="rounded" data-reveal="fade-up">こんな症状ありませんか？</h3>
+                <h2 class="section-title" data-reveal="fade-up" data-delay="100">劣化のサイン</h2>
+                <p data-reveal="fade-up" data-delay="200">1つでも当てはまったら、ご相談ください</p>
+            </div>
+            <div class="cards">
+                <div class="card catag_01" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img01.png" alt="img01">
+                        </div>
+                        <div class="txt_box">
+                            <h2>チョーキング現象</h2>
+                            <p>壁を触ると白い粉が手につく</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card catag_02" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img02.png" alt="img02">
+                        </div>
+                        <div class="txt_box">
+                            <h2>ひび割れ</h2>
+                            <p>外壁に亀裂や割れ目が発生</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card catag_02" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img03.png" alt="img03">
+                        </div>
+                        <div class="txt_box">
+                            <h2>塗膜の剥がれ</h2>
+                            <p>塗装が浮いて剥がれている</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card catag_01" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img04.png" alt="img04">
+                        </div>
+                        <div class="txt_box">
+                            <h2>錆の発生</h2>
+                            <p>金属部分に錆が発生</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card catag_03" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img05.png" alt="img05">
+                        </div>
+                        <div class="txt_box">
+                            <h2>色あせ</h2>
+                            <p>外壁の色が薄くなっている</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card catag_01" data-reveal="fade-up" data-delay="200">
+                    <a href="#">
+                        <div class="img_box">
+                            <img src="../img/flow/img06.png" alt="img06">
+                        </div>
+                        <div class="txt_box">
+                            <h2>腐食</h2>
+                            <p>屋根材や構造材の劣化や腐食が進行</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sub_flow notice px py">
+        <div class="inner">
+            <div class="section-header">
+                <h3 class="rounded2" data-reveal="fade-up"><img src="../img/flow/icon03.png">注意</h3>
+                <h2 class="section-title" data-reveal="fade-up" data-delay="100">放置するとどうなる？</h2>
+                <p data-reveal="fade-up" data-delay="200">劣化が進行すると、修繕費用が数倍に...</p>
+            </div>
+            <div class="notice-accordion">
+
+                <div class="notice-item">
+                    <button class="notice-header">
+                        <img src="../img/flow/step01.png" alt="">
+                        <div class="txt_box">
+                            <h3>色あせ・チョーキング</h3>
+                            <span>塗装だけで済む段階</span>
+                        </div>
+                        <span class="arrow">›</span>
+                    </button>
+
+                    <div class="notice-content">
+                        <p>
+                            紫外線や雨風で塗膜の防水性が低下している状態です。
+                            放置すると外壁が水を吸いやすくなり、
+                            劣化が一気に進行します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <button class="notice-header">
+                        <img src="../img/flow/step02.png" alt="">
+                        <div class="txt_box">
+                            <h3>ひび割れ・剥がれ</h3>
+                            <span>下地補修が必要に</span>
+                        </div>
+                        <span class="arrow">›</span>
+                    </button>
+
+                    <div class="notice-content">
+                        <p>
+                            外壁の隙間から雨水が入り込みやすくなります。
+                            放置すると下地まで傷み、
+                            補修費用が大きくなる原因になります。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <button class="notice-header">
+                        <img src="../img/flow/step03.png" alt="">
+                        <div class="txt_box">
+                            <h3>雨漏り発生</h3>
+                            <span>内部の修繕も必要</span>
+                        </div>
+                        <span class="arrow">›</span>
+                    </button>
+
+                    <div class="notice-content">
+                        <p>
+                            室内への水漏れや天井・壁紙のシミにつながります。
+                            カビや腐食の原因となり、
+                            住まい全体の寿命を縮めてしまいます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <button class="notice-header">
+                        <img src="../img/flow/step04.png" alt="">
+                        <div class="txt_box">
+                            <h3>構造材の腐食</h3>
+                            <span>大規模修繕が必要</span>
+                        </div>
+                        <span class="arrow">›</span>
+                    </button>
+
+                    <div class="notice-content">
+                        <p>
+                            雨水の浸入により、屋根材や柱など建物を支える部分まで
+                            劣化している状態です。放置すると大規模修繕が必要となり、
+                            修理費用も大きく膨らむ可能性があります。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lower_msg" data-reveal="fade-up" data-delay="200">
+                💡 早期発見で費用を最小限に！
+                <span>定期的な点検と適切なタイミングでの塗装が、長期的なコスト削減につながります</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="sub_flow diagnosis px py">
+        <div class="inner">
+            <div class="section-header">
+                <h3 class="rounded2" data-reveal="fade-up"><img src="../img/flow/icon04.png">簡単診断</h3>
+                <h2 class="section-title" data-reveal="fade-up" data-delay="100">1分でわかる！塗装診断</h2>
+                <p data-reveal="fade-up" data-delay="200">4つの質問に答えるだけ</p>
+            </div>
+            <div class="diagnosis-quiz" data-reveal="fade-up" data-delay="200">
+                <!-- Progress bar -->
+                 <div class="quiz-progress-label">
+                    <span>質問 <span id="quizCurrentStep">1</span> / <span id="quizTotalSteps">4</span></span>
+                    <span id="quizPercentLabel">25% 完了</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                </div>
+                
+
+                <!-- Steps -->
+                <div class="quiz-steps">
+
+                    <!-- Step 1 -->
+                    <div class="quiz-step active" data-step="1">
+                        <p class="quiz-question">築何年経過していますか？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="2">10年未満 <span>›</span></button>
+                            <button class="quiz-option" data-next="2">10年以上 <span>›</span></button>
+                            <button class="quiz-option" data-next="2">15年以上 <span>›</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="quiz-step" data-step="2">
+                        <p class="quiz-question">外壁の状態はどうですか？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="3">特に気になる箇所はない <span>›</span></button>
+                            <button class="quiz-option" data-next="3">色あせ・汚れが目立つ <span>›</span></button>
+                            <button class="quiz-option" data-next="3">ひび割れ・剥がれがある <span>›</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="quiz-step" data-step="3">
+                        <p class="quiz-question">前回の塗装からどのくらい経ちますか？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="4">塗装したことがない（新築） <span>›</span></button>
+                            <button class="quiz-option" data-next="4">5年未満 <span>›</span></button>
+                            <button class="quiz-option" data-next="4">10年以上 <span>›</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="quiz-step" data-step="4">
+                        <p class="quiz-question">現在、雨漏りや水染みはありますか？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="result">ない <span>›</span></button>
+                            <button class="quiz-option" data-next="result">少し気になる箇所がある <span>›</span></button>
+                            <button class="quiz-option" data-next="result">雨漏りがある <span>›</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Result -->
+                    <div class="quiz-step quiz-result" data-step="result">
+                        <div class="quiz-result-icon">✓</div>
+                        <p class="quiz-result-title">診断が完了しました！</p>
+                        <p class="quiz-result-desc">専門スタッフが詳しく診断いたします。<br>お気軽にご相談ください。</p>
+                        <div class="quiz-result-btns">
+                            <a href="tel:011-893-1986" class="quiz-btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5.1 2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 18z"></path></svg>
+                                今すぐ電話する
+                            </a>
+                            <a href="#contact" class="quiz-btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                メールで相談
+                            </a>
+                        </div>
+                        <button class="quiz-restart" id="quizRestart">最初からやり直す</button>
+                    </div>
+
+                </div><!-- /.quiz-steps -->
+            </div><!-- /.diagnosis-quiz -->
+        </div>
+    </section>
+
+    <section class="sub_flow cta-consult px py">
+        <div class="inner">
+            <span class="cta-badge" data-reveal="fade-up">無料診断実施中</span>
+            <h2 class="cta-title" data-reveal="fade-up" data-delay="100">無料診断・見積もり<br>0円で実施中</h2>
+            <p class="cta-desc" data-reveal="fade-up" data-delay="200">125年の実績を持つプロが、あなたの住まいを徹底診断。<br>お見積もりまで完全無料。しつこい営業は一切ありません。</p>
+            <div class="cta-features" data-reveal="fade-up" data-delay="200">
+                <div class="cta-feature">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    診断・見積もり無料
+                </div>
+                <div class="cta-feature">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    しつこい営業なし
+                </div>
+            </div>
+            <div class="cta-btns" data-reveal="fade-up" data-delay="200">
+                <a href="tel:011-893-1986" class="cta-btn-phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5.1 2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 18z"></path></svg>
+                    <span class="cta-btn-inner">
+                        <span class="cta-btn-label">今すぐお電話</span>
+                        <span class="cta-btn-number">011-893-1986</span>
+                    </span>
+                </a>
+                <a href="#contact" class="cta-btn-mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    メールで相談
+                </a>
+            </div>
+            <p class="cta-hours" data-reveal="fade-up" data-delay="200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                受付時間：平日 9:00〜18:00 /
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                メールは24時間受付
+            </p>
+        </div>
+    </section>
+  </article>
+</main>
+
+    <div id="page_top"><a href="#"></a></div>
+    
+    <footer>
+      <div class="container">
+        <div class="footer-grid" data-reveal="fade-up">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo-wrap" style="margin-bottom:1rem;">
+              <img src="../img/kp-logo__1_.jpg" alt="ロゴ" style="height:48px;width:auto;object-fit:contain;border-radius:4px;" onerror="this.style.display='none'">
+              <div>
+                <div class="logo-text-main">小島塗装店</div>
+                <div class="logo-text-sub">KOJIMA PAINT Co., Ltd.</div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <h4>本社</h4>
+            <div class="footer-address">
+              <p><img src="../img/icon06.png" alt="icon06"><span>〒004-0074<br>北海道札幌市厚別区厚別北4条4丁目3-5</span></p>
+              <p><img src="../img/icon07.png" alt="icon07"><span>TEL: 011-893-1986</span></p>
+              <p><img src="../img/icon08.png" alt="icon08"><span>FAX: 011-556-2085</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>上越本店</h4>
+            <div class="footer-address">
+              <p><img src="../img/icon06.png" alt="icon06"><span>〒943-0828<br>新潟県上越市北本町2丁目1-26</span></p>
+              <p><img src="../img/icon07.png" alt="icon07"><span>TEL: 025-523-5679</span></p>
+              <p><img src="../img/icon08.png" alt="icon08"><span>FAX: 025-523-5195</span></p>
+            </div>
+          </div>
+          <div>
+            <h4>メニュー</h4><nav>
+              <a href="../service/index.html">塗装サービス</a>
+              <a href="../company/index.html">会社概要</a>
+              <a href="../painting-guide/index.html">塗替えの知識</a>
+              <a href="../recruit/index.html">採用情報</a>
+              <a href="../contact/index.html">お問合せ</a>
+              <a href="../privacy/index.html">プライバシーポリシー</a>
+            </nav></div>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 株式会社小島塗装店 KOJIMA PAINT Co., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- Javascript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script src="../js/functions.js"></script>
+      <script src="../loader/loader.js"></script>
+      <script src="../js/scroll-trigger.js"></script>
+      <script src="../js/animation.js"></script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>

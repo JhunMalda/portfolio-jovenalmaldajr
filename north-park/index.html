@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" /><title>Top | 札幌月極.com</title><meta name="description" content="" /><meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="icon" href="./img/favicon-192x192.png" sizes="48x48" type="image/png" media="all" />
+    <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon.png" type="image/png" media="all" />
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./mfp.statics/mailformpro.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/header.css" />
+    <link rel="stylesheet" type="text/css" href="./css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="./loader/loader.css" />
+    <link rel="stylesheet" type="text/css" href="./css/top.css" />
+    <link rel="stylesheet" type="text/css" href="./css/add.css" />
+    <link rel="stylesheet" type="text/css" href="./css/lower.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <div id="custom-cursor"></div>
+  <body class="top">
+
+    
+    <!-- Loader -->
+    <div id="loader">
+      <img src="./loader/logo.png" alt="logo" id="logo" class="logo_img">
+    </div>
+    
+
+    
+    <header class="site-header">
+    
+      <div class="inner">
+        <a href="./index.html" class="logo">
+          <img src="./img/logo.png" alt="札幌月極.com" />
+        </a>
+        <nav>
+          <a href="./search/index.html">月極駐車場検索</a>
+          <a href="./news/1/index.html">お知らせ</a>
+          <a href="./company/index.html">会社情報</a>
+          <a href="./listing-request/index.html">オーナー様募集</a>
+          <a href="./contact/index.html" class="btn-contact">お問合せ</a>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav">
+        <a href="./search/index.html">月極駐車場検索</a>
+        <a href="./news/1/index.html">お知らせ</a>
+        <a href="./company/index.html">会社情報</a>
+        <a href="./listing-request/index.html">オーナー様募集</a>
+        <a href="./contact/index.html" class="btn btn-primary btn-full" style="margin-top:0.5rem">お問合せ</a>
+        <a href="./mypage-login/index.html" class="btn btn-primary btn-full" style="margin-top:0.5rem">マイページ</a>
+      </nav>
+    </header>
+    
+<main id="site-content">
+  <article>
+    <section class="hero">
+  <div class="hero-content">
+    <h1>月極駐車場探しを、もっと簡単に。</h1>
+    <p>札幌市内1,700件以上の駐車場情報から、あなたにぴったりの駐車場が見つかります。</p>
+    <div class="hero-search-box">
+      <div class="hero-search-box-input">
+        <label for="address">住所で検索</label>
+        <input type="text" id="address" name="name" placeholder="住所の一部、駅名、ランドマークなどで探せます。" />
+      </div>
+      <a href="./search/index.html" class="btn btn-primary btn-full" style="padding:1rem;font-size:1.1rem;">
+        駐車場を検索する
+      </a>
+    </div>
+  </div>
+
+  <!-- ===================== QUICK LINKS ===================== -->
+  <section class="quick-links">
+    <p class="subttl">人気のエリアから探す</p>
+
+    <!-- Viewport clips the sliding panels -->
+    <div class="area-slider-viewport">
+
+      <!-- Primary row (5 cards + dots button) -->
+      <div class="quick-links-grid area-panel area-panel--primary" id="area-panel-primary">
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>中央区<br><small>327件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>北区<br><small>245件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>東区<br><small>198件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>白石区<br><small>167件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>豊平区<br><small>154件</small></span>
+        </a>
+        <!-- Dots toggle -->
+        <button class="quick-link-item quick-link-item-last" id="area-toggle-btn" aria-expanded="false">
+          <span class="dots-icon">●●●</span>
+          <span>その他のエリア</span>
+        </button>
+      </div>
+
+      <!-- Extra row (6 cards + back button) — hidden off to the right -->
+      <div class="quick-links-grid area-panel area-panel--extra" id="area-panel-extra" aria-hidden="true">
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>西区<br><small>142件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>厚別区<br><small>58件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>手稲区<br><small>36件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>清田区<br><small>9件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>南区<br><small>5件</small></span>
+        </a>
+        <a href="./search/index.html" class="quick-link-item">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+          <span>札幌市街<br><small>3件</small></span>
+        </a>
+        <!-- Back button -->
+        <button class="quick-link-item quick-link-item-last" id="area-back-btn">
+          <span class="dots-icon">◀</span>
+          <span>戻る</span>
+        </button>
+      </div>
+
+    </div><!-- /.area-slider-viewport -->
+  </section>
+</section>
+
+
+    <!-- ===================== NEWS ===================== -->
+    <section id="news" class="news-section">
+      <div class="inner">
+        <div class="section-head">
+          <p class="section-label">NEWS</p>
+          <h2 class="section-title">お知らせ</h2>
+        </div>
+        <div class="news-list">
+          <a href="./news/2026-0328/index.html" class="news-item">
+            <span class="date">2026.03.28</span>
+            <p>春の新規契約キャンペーン実施中！</p>
+          </a>
+          <a href="./news/2026-0325/index.html" class="news-item">
+            <span class="date">2026.03.25</span>
+            <p>ゴールデンウィーク期間の営業について</p>
+          </a>
+        </div>
+        <div class="view-all">
+          <a href="./news/1/index.html" class="btn btn-primary">一覧を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARKING LOTS ===================== -->
+    <section id="lots" class="parking-lots">
+      <div class="inner">
+        <div class="section-head">
+          <p class="section-label">PARKING LOTS</p>
+          <h2 class="section-title">おすすめ駐車場</h2>
+          <p>札幌市内および近郊の人気月極駐車場をご紹介します</p>
+        </div>
+        <div class="parking-grid" id="parking-grid">
+          <!-- Populated by JS -->
+        </div>
+        <div style="text-align:center;">
+          <a href="./search/index.html" class="btn btn-primary" style="gap:0.5rem;font-size:1.05rem;padding:0.85rem 2.5rem;">
+            すべての駐車場を見る
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE CARDS ===================== -->
+    <section class="service-cards">
+      <div class="inner">
+        <div class="service-grid">
+          <a href="./company/index.html" class="service-card">
+            <div class="gradient-top gradient-blue">
+              <div>
+                <h3>会社情報</h3>
+                <p class="desc">札幌月極.com運営<br>ノースパーク株式会社について</p>
+              </div>
+              <span class="see-more">もっと見る <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+            <div class="img-wrap">
+              <img src="./img/top/img01.png" alt="会社情報" />
+            </div>
+          </a>
+          <a href="./suggestion/index.html" class="service-card">
+            <div class="gradient-top gradient-green"> 
+              <div>
+                <h3>駐車場お任せ<br>提案サービス</h3>
+                <p class="desc">専門スタッフがお客様のご要望に合わせて最適な駐車場をご提案</p>
+              </div>
+              <span class="see-more">もっと見る <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+            <div class="img-wrap">
+              <img src="./img/top/img02.png" alt="掲載について" />
+            </div>
+          </a>
+          <a href="./listing-request/index.html" class="service-card">
+            <div class="gradient-top gradient-orange">
+              <div>
+                <h3>駐車場掲載依頼</h3>
+                <p class="desc">空いている土地を活かしたい駐車場のオーナー様向けサービス</p>
+              </div>
+              <span class="see-more">もっと見る <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+            <div class="img-wrap">
+              <img src="./img/top/img03.png" alt="提案サービス" />
+            </div>
+          </a>
+          <a href="./company-suggestion/index.html" class="service-card">
+            <div class="gradient-top gradient-cyan">
+              <div>
+                <h3>企業様向けご<br>提案サービス</h3>
+                <p class="desc">複数台を一ヶ所で借りたい企業様・法人向けサービス</p>
+              </div>
+              <span class="see-more">もっと見る <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+            <div class="img-wrap">
+              <img src="./img/top/img04.png" alt="企業向けサービス" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about-section">
+      <div class="inner">
+        <div class="section-head">
+          <p class="section-label">ABOUT US</p>
+          <h2 class="section-title">札幌月極.comについて</h2>
+        </div>
+        <p class="about-text">
+          札幌月極.comは、「日本中の「探す」と「停める」を便利にしたい」をモット にノースパ ク(株)が運営する、<br>
+          札幌発の地域密着型月極駐車場検索サイトです。札幌市内および近郊で1,700件以上の駐車場情報を掲載し、市内<br>
+          物件数No.1を誇ります。お客様ご自身で検索できる他、「このエリアで探して！」のリクエストも対応いたしま<br>
+          す。気になる駐車場が見つかれば空き状況や詳細情報、周辺の空き駐車場をご案内し、契約サポ トチ ムが申込<br>
+          から利用開始までをスム ズに支援します。
+        </p>
+        <div class="stats-box">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="number">1,700+</div>
+              <div class="label">掲載駐車場数</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">10+</div>
+              <div class="label">対応エリア（札幌市全区対応）</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">24<small>h</small>/7<small>days</small></div>
+              <div class="label">チャットボットによるサポート対応</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<div id="page_top"><a href="#"></a></div>
+
+
+<script src="./loader/loader.js"></script>
+<link rel="stylesheet" href="./loader/loader.css">
+
+
+<footer class="site-footer py px">
+  <div class="inner">
+    <div class="footer-grid">
+      <div>
+        <img src="./img/logo.png" alt="札幌月極.com" class="footer-logo" />
+        <p class="footer-address">北海道札幌市白石区菊水5条1丁目</p>
+      </div>
+      <div class="footer-col">
+        <h3>サービス</h3>
+        <ul>
+          <li><a href="./search/index.html">月極駐車場検索</a></li>
+          <li><a href="./listing-request/index.html">駐車場掲載依頼</a></li>
+          <li><a href="#request">駐車場お任せ提案サービス</a></li>
+          <li><a href="#corporate">企業様向けご提案サービス</a></li>
+          <li><a href="./mypage-login/index.html">マイページ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>会社情報</h3>
+        <ul>
+          <li><a href="./company/index.html">会社情報</a></li>
+          <li><a href="./privacy/index.html">プライバシーポリシー</a></li>
+          <li><a href="#disclaimer">免責事項</a></li>
+          <li><a href="#terms">利用規約</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>お問い合わせ</h3>
+        <a href="./contact/index.html" class="footer-contact-btn">お問い合わせフォーム</a>
+        <p class="footer-phone">電話：011-820-8911（代表）<br />受付時間: 平日 9:00-18:00</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>Copyright© Hokkaido Parking co., ltd. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Page-specific scripts -->
+<script src="./loader/loader.js"></script>
+<script src="./js/scroll-trigger.js"></script>
+<script src="./js/animation.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

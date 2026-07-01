@@ -1,0 +1,91 @@
+/* === BLOCK ANIMATIONS === */
+.animate-right,
+.animate-left {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate-right {
+  transform: translateX(-100px);
+}
+.animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-left {
+  transform: translateX(100px);
+}
+.animate-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animate from bottom */
+.animate-bottom {
+  opacity: 0;
+  transform: translate(0, 60px);
+  transition: all 1s;
+}
+.animate-bottom.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.animate-bottom-2 {
+  visibility: visible;
+  opacity: 0;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 80, 0, 1);
+}
+
+.animate-bottom-2.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: all, opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0.1s,
+    transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0.1s;
+}
+
+/* CUSTOM CURSOR */
+    html, body {
+        cursor: none;
+    }
+
+    #custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--border, rgba(44, 44, 44, 0.6));
+        background: #155efc65;
+        pointer-events: none;
+        user-select: none;
+        transform: translate(-50%, -50%) scale(1);
+        transition:
+            transform 0.5s ease,
+            background-color 0.5s ease,
+            width 0.3s ease,
+            height 0.3s ease;
+        z-index: 10000;
+    }
+
+    #custom-cursor.link-hover {
+        background: transparent;
+        width: 50px; 
+        height: 50px;
+        border: 1px solid var(--border, rgba(44, 44, 44, 0.6));
+        transform: translate(-50%, -50%) scale(1);
+        background: #155efc65;
+    }
+
+    #custom-cursor.is-hide {
+        opacity: 0;
+    }
+
+    @media (hover: none) {
+        #custom-cursor {
+            display: none !important;
+        }
+    }
+
+    /* CUSTOM CURSOR */
