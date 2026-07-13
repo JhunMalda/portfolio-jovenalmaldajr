@@ -11,15 +11,41 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet" />
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', saved || 'dark');
+    })();
+  </script>
 </head>
 
 <body>
 
   <nav>
-    <div class="nav-logo">JRM.dev</div>
+    <div class="nav-brand">
+      <a href="#" class="nav-logo">JRM.dev</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <line x1="12" y1="2" x2="12" y2="4"></line>
+          <line x1="12" y1="20" x2="12" y2="22"></line>
+          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+          <line x1="2" y1="12" x2="4" y2="12"></line>
+          <line x1="20" y1="12" x2="22" y2="12"></line>
+          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
     <ul class="nav-links">
       <li><a href="#projects">Work</a></li>
+      <li><a href="#stack">Tech Stack</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a class="resume" href="https://jhunmalda.github.io/portfolio-jrm/resume.html" target="_blank">Resume</a></li>
     </ul>
   </nav>
 
@@ -29,9 +55,11 @@
     <h1 class="hero-name">
       Jovenal<br>R. Malda<span class="accent-dot">.</span>
     </h1>
-    <p class="hero-title">Turning business goals into sharp web experiences.</p>
+    <p class="hero-title">Welcome to my portfolio.</p>
     <p class="hero-bio">
-      I build responsive, production ready websites for companies, clean code, careful layout, and attention to every detail. HTML, CSS, JS, done right.
+      Hi, I'm Jovenal Malda, a Front-End Developer from the Philippines.
+      I enjoy creating modern websites that are fast, responsive, and easy to use.
+      Thanks for visiting my portfolio.
     </p>
     <div class="hero-cta">
       <a class="btn-primary" href="#projects">See my work →</a>
@@ -106,18 +134,80 @@
     </div>
   </section>
 
+  <!-- TECH STACK -->
+  <section id="stack">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="stack_grid">
+      <div class="stack_wrap">
+        <h2>FRONT END</h2>
+        <div class="stack_pills">
+          <div class="pill">HTML</div>
+          <div class="pill">CSS</div>
+          <div class="pill">SCSS</div>
+          <div class="pill">Tailwind</div>
+          <div class="pill">Bootstrap</div>
+          <div class="pill">JavaScript</div>
+          <div class="pill">Prettier</div>
+          <div class="pill">11ty</div>
+        </div>
+      </div>
+      <div class="stack_wrap">
+        <h2>CMS</h2>
+        <div class="stack_pills">
+          <div class="pill">WordPress</div>
+        </div>
+      </div>
+      <div class="stack_wrap">
+        <h2>AI & MACHINE LEARNING</h2>
+        <div class="stack_pills">
+          <div class="pill">CHATGPT</div>
+          <div class="pill">Claude Ai</div>
+          <div class="pill">Figma Make</div>
+        </div>
+      </div>
+      <div class="stack_wrap">
+        <h2>Developer Tools</h2>
+        <div class="stack_pills">
+          <div class="pill">Git</div>
+          <div class="pill">GitHub</div>
+          <div class="pill">VS Code</div>
+          <div class="pill">PhotoShop</div>
+          <div class="pill">Discord</div>
+          <div class="pill">Slack</div>
+          <div class="pill">Notion</div>
+        </div>
+      </div>
+      <div class="stack_wrap">
+        <h2> STILL LEARNING PROG. LANGUAGE</h2>
+        <div class="stack_pills">
+          <div class="pill">React</div>
+          <div class="pill">Next.js</div>
+          <div class="pill">Node.js</div>
+          <div class="pill">Vue.js</div>
+          <div class="pill">TypeScript</div>
+          <div class="pill">JavaScript</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header">
-      <span class="section-number">02</span>
+      <span class="section-number">03</span>
       <h2 class="section-title">Get in Touch</h2>
       <div class="section-line"></div>
     </div>
 
     <div class="contact-inner">
       <h3 class="contact-heading">Let's build something <span>great</span> together.</h3>
-      <p class="contact-sub">Open to freelance projects, full-time roles, and interesting collaborations. Don't be a
-        stranger.</p>
+      <!-- <p class="contact-sub">Open to freelance projects, full-time roles, and interesting collaborations. Don't be a
+        stranger.</p> -->
 
       <div class="contact-links">
         <a class="contact-link" href="mailto:jovenalmalda@gmail.com">
@@ -156,6 +246,16 @@
     <div class="footer-name">JOVENAL R. MALDA JR. © 2026</div>
     <div class="footer-credit">Built with intent.</div>
   </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
 
 </body>
 
