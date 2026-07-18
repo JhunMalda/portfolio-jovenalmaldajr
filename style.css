@@ -180,13 +180,13 @@ nav {
     gap: 12px;
 }
 
-.hero-eyebrow::before {
+/*.hero-eyebrow::before {
     content: '';
     display: inline-block;
     width: 32px;
     height: 1px;
     background: var(--accent);
-}
+}*/
 
 .hero-name {
     font-size: clamp(52px, 8vw, 96px);
