@@ -1,268 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JRM.dev — Jovenal R. Malda Jr.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="./style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet" />
-  <script>
-    (function () {
-      const saved = localStorage.getItem('theme');
-      document.documentElement.setAttribute('data-theme', saved || 'dark');
-    })();
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jovenal Malda — Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* Set theme before first paint to avoid a flash of the wrong theme. */
+  (function(){
+    try{
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
-
 <body>
 
-  <nav>
-    <div class="nav-brand">
-      <a href="#" class="nav-logo">JRM.dev</a>
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="4"></circle>
-          <line x1="12" y1="2" x2="12" y2="4"></line>
-          <line x1="12" y1="20" x2="12" y2="22"></line>
-          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
-          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
-          <line x1="2" y1="12" x2="4" y2="12"></line>
-          <line x1="20" y1="12" x2="22" y2="12"></line>
-          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
-          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
-        </svg>
-        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
+<div class="grid-field" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><span class="dot"></span> jovenalmaldajr.dev.ai-automation</a>
+    <nav class="nav-tabs" aria-label="Section navigation">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#work">work</a>
+      <a href="#process">process</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z" stroke-linejoin="round"/></svg>
       </button>
+      <a class="btn" href="#work">view work</a>
+      <a class="btn primary" href="#contact">get in touch</a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#projects">Work</a></li>
-      <li><a href="#stack">Tech Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="resume" href="https://jhunmalda.github.io/portfolio-jrm/resume.html" target="_blank">Resume</a></li>
-    </ul>
-  </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-eyebrow">Frontend Developer</div>
-    <h1 class="hero-name">
-      Jovenal<br>R. Malda<span class="accent-dot">.</span>
-    </h1>
-    <p class="hero-title">Welcome to my portfolio.</p>
-    <p class="hero-bio">
-      Hi, I'm Jovenal Malda, a Front-End Developer from the Philippines.
-      I enjoy creating modern websites that are fast, responsive, and easy to use.
-      Thanks for visiting my portfolio.
-    </p>
-    <div class="hero-cta">
-      <a class="btn-primary" href="#projects">See my work →</a>
-      <a class="btn-ghost" href="#contact">Get in touch</a>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <span class="section-number">01</span>
-      <h2 class="section-title">Recent Projects</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="projects-grid">
-      <a href="./kojima-paint/index.html" target="_blank" class="project-card">
-        <div class="project-tag">Corporate Site</div>
-        <h3 class="project-title">Kojima Paint</h3>
-        <p class="project-desc">A multi-page corporate website for a 125+ year-old Japanese painting company featuring
-          scroll animations, a service guide, recruitment page, and contact flow.</p>
-        <div class="project-stack">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JS</span>
-        </div>
-        <div class="project-arrow">↗</div>
-      </a>
-
-      <a href="./mino-kensetsu/index.html" target="_blank" class="project-card">
-        <div class="project-tag">Corporate Site</div>
-        <h3 class="project-title">Mino Kensetsu</h3>
-        <p class="project-desc">A construction company website built for 三野建設株式会社, showcasing their business areas,
-          technology, and recruitment with a clean, professional layout.</p>
-        <div class="project-stack">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JS</span>
-        </div>
-        <div class="project-arrow">↗</div>
-      </a>
-
-      <a href="./north-park/index.html" target="_blank" class="project-card">
-        <div class="project-tag">Listing Platform</div>
-        <h3 class="project-title">North Park</h3>
-        <p class="project-desc">A monthly parking lot listing platform for Sapporo, making it easier for
-          users to find and browse available parking spaces in the city.</p>
-        <div class="project-stack">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JS</span>
-        </div>
-        <div class="project-arrow">↗</div>
-      </a>
-
-      <a href="./sdp/index.html" target="_blank" class="project-card">
-        <div class="project-tag">Web App</div>
-        <h3 class="project-title">SDP</h3>
-        <p class="project-desc">A web project built with a clean structure and responsive design demonstrating
-          proficiency in semantic HTML, custom CSS, and vanilla JavaScript.</p>
-        <div class="project-stack">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JS</span>
-        </div>
-        <div class="project-arrow">↗</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- TECH STACK -->
-  <section id="stack">
-    <div class="section-header">
-      <span class="section-number">02</span>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="stack_grid">
-      <div class="stack_wrap">
-        <h2>FRONT END</h2>
-        <div class="stack_pills">
-          <div class="pill">HTML5</div>
-          <div class="pill">CSS3</div>
-          <div class="pill">JavaScript (ES6+)</div>
-          <div class="pill">SCSS</div>
-          <div class="pill">Tailwind CSS</div>
-          <div class="pill">Bootstrap</div>
-          <div class="pill">Eleventy (11ty)</div>
-          <div class="pill">Prettier</div>
+<main>
+  <section class="hero wrap" style="border-top:none;">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <p class="eyebrow">WEB DEVELOPER · PHILIPPINES</p>
+        <h1>I build interfaces that are fast, accessible, and <span class="accent">easy to use.</span></h1>
+        <p class="hero-sub">I'm Jovenal Malda — a web developer from the Philippines with 4+ years turning Figma designs into clean, responsive, pixel-perfect websites. These days I pair that with AI-assisted tooling to move faster without cutting corners on quality.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
-      <div class="stack_wrap">
-        <h2>CMS</h2>
-        <div class="stack_pills">
-          <div class="pill">WordPress (Learning / Hands-on)</div>
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <img src="./me.jpg" alt="">
+          <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-6 7.5-6s6.1 2 7.5 6" stroke-linecap="round"/></svg> -->
         </div>
       </div>
-      <div class="stack_wrap">
-        <h2>AI DEVELOPMENT TOOLS</h2>
-        <div class="stack_pills">
-          <div class="pill">CHATGPT</div>
-          <div class="pill">Claude Ai</div>
-          <div class="pill">Figma Make</div>
-        </div>
+    </div>
+
+    <div class="pipeline">
+      <div class="pipeline-head">
+        <span>~/pipeline · client-site-build</span>
+        <span class="run-status"><span class="dot"></span> live</span>
       </div>
-      <div class="stack_wrap">
-        <h2>DEVELOPER TOOLS</h2>
-        <div class="stack_pills">
-          <div class="pill">Git</div>
-          <div class="pill">GitHub</div>
-          <div class="pill">VS Code</div>
-          <div class="pill">PhotoShop</div>
-          <div class="pill">Discord</div>
-          <div class="pill">Chrome DevTools</div>
-        </div>
-      </div>
-      <div class="stack_wrap">
-        <h2>WEB DEVELOPMENT</h2>
-        <div class="stack_pills">
-          <div class="pill">Responsive Design</div>
-          <div class="pill">Accessibility (WCAG)</div>
-          <div class="pill">Cross-browser Compatibility</div>
-          <div class="pill">Performance Optimization</div>
-        </div>
-      </div>
-      <div class="stack_wrap">
-        <h2>CURRENTLY EXPLORING</h2>
-        <div class="stack_pills">
-          <div class="pill">React</div>
-          <div class="pill">Next.js</div>
-          <div class="pill">Node.js</div>
-          <div class="pill">TypeScript</div>
+      <div class="pipeline-body">
+        <div class="pipeline-track">
+          <div class="p-node">
+            <div class="icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v6M12 21v-6M4.2 7l5 3M14.8 14l5 3M4.2 17l5-3M14.8 10l5-3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="label">Design</div>
+            <div class="sub">figma → tokens</div>
+          </div>
+          <div class="p-connector"></div>
+          <div class="p-node">
+            <div class="icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4l-5 8 5 8M16 4l5 8-5 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="label">Build</div>
+            <div class="sub">html · css · js</div>
+          </div>
+          <div class="p-connector"></div>
+          <div class="p-node">
+            <div class="icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke-linecap="round"/></svg>
+            </div>
+            <div class="label">AI-Assist</div>
+            <div class="sub">chatgpt · claude</div>
+          </div>
+          <div class="p-connector"></div>
+          <div class="p-node">
+            <div class="icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="label">Ship</div>
+            <div class="sub">qa · deploy</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-number">03</span>
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="section-line"></div>
+  <a href="#" id="about" class="anchor"></a>
+  <section class="wrap" data-target="about">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">01 — ABOUT</span>
+        <h2>Four years of shipping pixel-perfect, accessible interfaces.</h2>
+      </div>
+      <p class="section-desc">Caloocan City, Philippines-based. Comfortable working solo or inside a team.</p>
     </div>
-
-    <div class="contact-inner">
-      <h3 class="contact-heading">Let's build something <span>great</span> together.</h3>
-      <!-- <p class="contact-sub">Open to freelance projects, full-time roles, and interesting collaborations. Don't be a
-        stranger.</p> -->
-
-      <div class="contact-links">
-        <a class="contact-link" href="mailto:jovenalmalda@gmail.com">
-          <div>
-            <div class="contact-link-label">EMAIL</div>
-            <div class="contact-link-value">jovenalmalda@gmail.com</div>
-          </div>
-          <span class="contact-link-icon">↗</span>
-        </a>
-        <a class="contact-link" href="https://github.com/JhunMalda" target="_blank">
-          <div>
-            <div class="contact-link-label">GITHUB Personal</div>
-            <div class="contact-link-value">github.com/JhunMalda</div>
-          </div>
-          <span class="contact-link-icon">↗</span>
-        </a>
-        <a class="contact-link" href="https://github.com/jhunsoftnext" target="_blank">
-          <div>
-            <div class="contact-link-label">GITHUB in softnext</div>
-            <div class="contact-link-value">github.com/jhunsoftnext</div>
-          </div>
-          <span class="contact-link-icon">↗</span>
-        </a>
-        <a class="contact-link" href="https://www.linkedin.com/in/jovenal-jr-malda/" target="_blank">
-          <div>
-            <div class="contact-link-label">LINKEDIN</div>
-            <div class="contact-link-value">linkedin.com/in/jovenal-jr-malda</div>
-          </div>
-          <span class="contact-link-icon">↗</span>
-        </a>
+    <div class="about-grid">
+      <div>
+        <p><strong>I'm a web developer</strong> with 4+ years of hands-on experience building responsive, accessible web interfaces using HTML, CSS, and JavaScript — and, more recently, React and Next.js. I care about writing clean, maintainable code and about translating a design file into something that actually feels as good as it looks in the browser.</p>
+        <p>Most of my work has been on <strong>multi-page corporate sites and listing platforms</strong> for clients in Japan — translating Figma designs into pixel-perfect, cross-browser-compatible builds while keeping WCAG accessibility standards in mind, and optimizing assets and load performance along the way.</p>
+        <p>More recently I've folded <strong>AI tooling into that workflow</strong> — using ChatGPT, Claude, and Figma Make to move through builds faster — while still doing the fundamentals by hand: semantic markup, considered CSS, and JavaScript that doesn't get in the way.</p>
+      </div>
+      <div class="status-panel">
+        <div class="status-row"><span>based_in</span><span>Caloocan City, PH</span></div>
+        <div class="status-row"><span>experience</span><span>4+ years</span></div>
+        <div class="status-row"><span>last_role</span><span>Softnext Co., Ltd.</span></div>
+        <div class="status-row"><span>focus</span><span>Web dev + AI-assisted</span></div>
+        <div class="status-row"><span>education</span><span>BS IT · 2019</span></div>
+        <div class="status-row"><span>stack</span><span>HTML · CSS · JS · React</span></div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="footer-name">JOVENAL R. MALDA JR. © 2026</div>
-    <div class="footer-credit">Built with intent.</div>
-  </footer>
+  <a href="#" id="skills" class="anchor"></a>
+  <section class="wrap" data-target="skills">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">02 — TECH STACK</span>
+        <h2>What's actually in the toolbox.</h2>
+      </div>
+      <p class="section-desc">Solid fundamentals, plus the AI tools that speed up getting there.</p>
+    </div>
+    <div class="modules">
+      <div class="module">
+        <div class="m-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-3M16 3h5v5M10 14L21 3"/></svg>
+          <h3>Web Development</h3>
+        </div>
+        <p>The core of every build — semantic, responsive, and easy for the next person to maintain.</p>
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">WordPress</span>
+        </div>
+      </div>
+      <div class="module">
+        <div class="m-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <h3>AI-Assisted Workflow</h3>
+        </div>
+        <p>Tools I lean on to plan, prototype, and move through builds faster.</p>
+        <div class="tags">
+          <span class="tag">ChatGPT</span>
+          <span class="tag">Claude AI</span>
+          <span class="tag">Figma Make</span>
+        </div>
+      </div>
+      <div class="module">
+        <div class="m-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          <h3>Design &amp; Tooling</h3>
+        </div>
+        <p>The design and dev tools behind every handoff, plus the habits that keep a build consistent.</p>
+        <div class="tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Photoshop</span>
+          <span class="tag">Illustrator</span>
+          <span class="tag">Adobe XD</span>
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Accessibility (WCAG)</span>
+        </div>
+      </div>
+    </div>
+    <p class="learning-line"><span>Currently leveling up:</span> <span class="tag">Node.js</span> <span class="tag">TypeScript</span></p>
+  </section>
 
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-  </script>
+  <a href="#" id="work" class="anchor"></a>
+  <section class="wrap" data-target="work">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">03 — SELECTED WORK</span>
+        <h2>Recent builds.</h2>
+      </div>
+      <p class="section-desc">Live client sites, logged like the builds they were.</p>
+    </div>
+    <div class="runs">
 
+      <div class="run-card">
+        <div class="run-top">
+          <div class="run-title">
+            <span class="badge">live</span>
+            <h3>Kojima Paint</h3>
+          </div>
+          <span class="run-meta">Corporate site · Japan</span>
+        </div>
+        <div class="run-body">
+          <p>A multi-page corporate website for a 125+ year-old Japanese painting company, featuring scroll animations, a service guide, a recruitment page, and a full contact flow.</p>
+          <ul class="run-highlights">
+            <li>Scroll animations</li>
+            <li>Service guide page</li>
+            <li>Recruitment page</li>
+            <li>End-to-end contact flow</li>
+          </ul>
+        </div>
+        <div class="run-footer">
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <a class="btn" href="./kojima-paint/index.html" target="_blank">View site ↗</a>
+        </div>
+      </div>
+
+      <div class="run-card">
+        <div class="run-top">
+          <div class="run-title">
+            <span class="badge">live</span>
+            <h3>Mino Kensetsu</h3>
+          </div>
+          <span class="run-meta">Corporate site · Japan</span>
+        </div>
+        <div class="run-body">
+          <p>A construction company website built for 三野建設株式会社 (Mino Construction Co., Ltd.), showcasing their business areas, technology, and recruitment with a clean, professional layout.</p>
+          <ul class="run-highlights">
+            <li>Business area overview</li>
+            <li>Technology showcase</li>
+            <li>Recruitment page</li>
+            <li>Clean, professional layout</li>
+          </ul>
+        </div>
+        <div class="run-footer">
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <a class="btn" href="./mino-kensetsu/index.html" target="_blank">View site ↗</a>
+        </div>
+      </div>
+
+      <div class="run-card">
+        <div class="run-top">
+          <div class="run-title">
+            <span class="badge">live</span>
+            <h3>North Park</h3>
+          </div>
+          <span class="run-meta">Listing platform · Sapporo</span>
+        </div>
+        <div class="run-body">
+          <p>A monthly parking lot listing platform for Sapporo, making it easier for users to find and browse available parking spaces around the city.</p>
+          <ul class="run-highlights">
+            <li>Listing search</li>
+            <li>City-wide coverage</li>
+            <li>User-friendly browse flow</li>
+          </ul>
+        </div>
+        <div class="run-footer">
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <a class="btn" href="./north-park/index.html" target="_blank">View site ↗</a>
+        </div>
+      </div>
+
+      <div class="run-card">
+        <div class="run-top">
+          <div class="run-title">
+            <span class="badge">live</span>
+            <h3>SDP</h3>
+          </div>
+          <span class="run-meta">Web project</span>
+        </div>
+        <div class="run-body">
+          <p>A web project built with a clean structure and responsive design, demonstrating proficiency in semantic HTML, custom CSS, and vanilla JavaScript.</p>
+          <ul class="run-highlights">
+            <li>Semantic HTML structure</li>
+            <li>Custom CSS system</li>
+            <li>Vanilla JS interactions</li>
+            <li>Fully responsive</li>
+          </ul>
+        </div>
+        <div class="run-footer">
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <a class="btn" href="./sdp/index.html" target="_blank">View site ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <a href="#" id="process" class="anchor"></a>
+  <section class="wrap" data-target="process">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">04 — HOW I WORK</span>
+        <h2>Same four stages, every build.</h2>
+      </div>
+      <p class="section-desc">Design first, code second, polish always.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <div class="step-num">STAGE 1</div>
+        <h3>Understand the brief</h3>
+        <p>What the site needs to do, who it's for, and what "done" looks like before any code gets written.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">STAGE 2</div>
+        <h3>Turn the design into markup</h3>
+        <p>Figma becomes semantic HTML and considered CSS — structured to hold up as the site grows.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">STAGE 3</div>
+        <h3>Add interactivity &amp; polish</h3>
+        <p>JavaScript, animation, and accessibility passes, checked across browsers and screen sizes.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">STAGE 4</div>
+        <h3>Test, optimize &amp; ship</h3>
+        <p>Assets optimized, images lazy-loaded, performance checked, then it goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" id="contact" class="anchor"></a>
+  <section class="wrap" data-target="contact">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">05 — CONTACT</span>
+        <h2>Let's build something great together.</h2>
+      </div>
+      <p class="section-desc">Open to freelance projects and full-time roles.</p>
+    </div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt">$</span> whoami</div>
+        <div class="line out">jovenal_malda — web developer</div>
+        <div class="line"><span class="prompt">$</span> contact --email</div>
+        <div class="line out"><a class="link" href="mailto:jovenalmalda@gmail.com">jovenalmalda@gmail.com</a></div>
+        <div class="line"><span class="prompt">$</span> contact --phone</div>
+        <div class="line out"><a class="link" href="tel:+639983884403">+63 998 388 4403</a></div>
+        <div class="line"><span class="prompt">$</span> contact --social</div>
+        <div class="line out">
+          <a class="link" href="https://github.com/JhunMalda" target="_blank">github.com/JhunMalda</a> ·
+          <a class="link" href="https://www.linkedin.com/in/jovenalmaldajr/" target="_blank">linkedin.com/in/jovenalmaldajr</a>
+        </div>
+        <div class="line"><span class="prompt">$</span> contact --resume</div>
+        <div class="line out"><a class="link" href="./resume.pdf" target="_blank">view resume ↗</a></div>
+        <div class="line"><span class="prompt">$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  JOVENAL R. MALDA JR. © 2026 · Built with intent.
+</footer>
+
+<script src="script.js" defer></script>
 </body>
-
 </html>
