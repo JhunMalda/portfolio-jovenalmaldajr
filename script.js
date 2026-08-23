@@ -1,17 +1,15 @@
 // Highlight the current section's tab in the nav as the user scrolls.
 (function () {
   const sections = document.querySelectorAll('main section[data-target]');
-  const navLinks = document.querySelectorAll('.nav-tabs a');
+  const navLinks = document.querySelectorAll('.nav-tabs a, .mobile-menu nav a');
 
   if (!sections.length || !navLinks.length) return;
 
-  const linkFor = (id) =>
-    document.querySelector(`.nav-tabs a[href="#${id}"]`);
-
   const setActive = (id) => {
     navLinks.forEach((link) => link.classList.remove('is-active'));
-    const active = linkFor(id);
-    if (active) active.classList.add('is-active');
+    document
+      .querySelectorAll(`.nav-tabs a[href="#${id}"], .mobile-menu nav a[href="#${id}"]`)
+      .forEach((link) => link.classList.add('is-active'));
   };
 
   const observer = new IntersectionObserver(
@@ -58,5 +56,55 @@
     } catch (e) {
       /* localStorage unavailable — theme just won't persist across visits */
     }
+  });
+})();
+
+// Hamburger menu (mobile nav).
+(function () {
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    menu.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  const openMenu = () => {
+    menu.classList.add('is-open');
+    toggle.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.contains('is-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close after picking a link.
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on outside click.
+  document.addEventListener('click', (event) => {
+    if (!menu.classList.contains('is-open')) return;
+    if (menu.contains(event.target) || toggle.contains(event.target)) return;
+    closeMenu();
+  });
+
+  // Close on Escape.
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  // Close automatically if the viewport grows past the mobile breakpoint.
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeMenu();
   });
 })();
