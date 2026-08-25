@@ -96,7 +96,7 @@
     if (!menu.classList.contains('is-open')) return;
     if (menu.contains(event.target) || toggle.contains(event.target)) return;
     closeMenu();
-  });
+  }); 
 
   // Close on Escape.
   document.addEventListener('keydown', (event) => {
