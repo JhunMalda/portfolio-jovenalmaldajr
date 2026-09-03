@@ -37,26 +37,44 @@ const chartObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".animate-date").forEach(el => chartObserver.observe(el));
 
-// CUSTOM CURSOR
+/* === CUSTOM CURSOR === */
+
 $(function () {
-    const cursor = document.getElementById('custom-cursor');
+  const cursor = document.getElementById("project1-cursor");
 
-    document.addEventListener('mousemove', e => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top  = `${e.clientY}px`;
-    cursor.classList.remove('is-hide');
-    });
+  if (!cursor) return;
 
-    document.addEventListener('mouseleave', () => {
-    cursor.classList.add('is-hide');
-    });
+  document.addEventListener("mousemove", function (event) {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+    cursor.classList.remove("is-hide");
+  });
 
-    document.body.addEventListener('pointerover', e => {
-    const el = e.target.closest('a, .slick-next, .slick-prev');
-    if (el) cursor.classList.add('link-hover');
-    });
-    document.body.addEventListener('pointerout', e => {
-    const el = e.target.closest('a, .slick-next, .slick-prev');
-    if (el) cursor.classList.remove('link-hover');
-    });
+  document.addEventListener("mouseleave", function () {
+    cursor.classList.add("is-hide");
+  });
+
+  document.body.addEventListener("pointerover", function (event) {
+    if (!(event.target instanceof Element)) return;
+
+    const target = event.target.closest(
+      "a, button, .slick-next, .slick-prev"
+    );
+
+    if (target) {
+      cursor.classList.add("link-hover");
+    }
+  });
+
+  document.body.addEventListener("pointerout", function (event) {
+    if (!(event.target instanceof Element)) return;
+
+    const target = event.target.closest(
+      "a, button, .slick-next, .slick-prev"
+    );
+
+    if (target) {
+      cursor.classList.remove("link-hover");
+    }
+  });
 });
