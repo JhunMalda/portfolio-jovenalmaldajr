@@ -124,27 +124,40 @@ $(function () {
   document.querySelectorAll(".animate-date").forEach((el) => chartObserver.observe(el));
 });
 
-// global js mouse stalker
+/* Global mouse stalker */
 $(function () {
-  const cursor = document.getElementById("custom-cursor");
+  const cursor = document.getElementById("site-cursor");
 
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
+  if (!cursor) return;
+
+  document.addEventListener("mousemove", function (event) {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
     cursor.classList.remove("is-hide");
   });
 
-  document.addEventListener("mouseleave", () => {
+  document.addEventListener("mouseleave", function () {
     cursor.classList.add("is-hide");
   });
 
-  document.body.addEventListener("pointerover", (e) => {
-    const el = e.target.closest("a, .slick-next, .slick-prev");
-    if (el) cursor.classList.add("link-hover");
+  document.body.addEventListener("pointerover", function (event) {
+    const target = event.target.closest(
+      "a, button, .slick-next, .slick-prev"
+    );
+
+    if (target) {
+      cursor.classList.add("link-hover");
+    }
   });
-  document.body.addEventListener("pointerout", (e) => {
-    const el = e.target.closest("a, .slick-next, .slick-prev");
-    if (el) cursor.classList.remove("link-hover");
+
+  document.body.addEventListener("pointerout", function (event) {
+    const target = event.target.closest(
+      "a, button, .slick-next, .slick-prev"
+    );
+
+    if (target) {
+      cursor.classList.remove("link-hover");
+    }
   });
 });
 
