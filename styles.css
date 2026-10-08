@@ -706,6 +706,7 @@
     text-align: center;
     border-color: var(--amber-dim);
     background: rgba(245, 166, 35, 0.06);
+    cursor: pointer;
   }
   @media (max-width: 900px){
     .cert-grid{ grid-template-columns: 1fr 1fr; }
