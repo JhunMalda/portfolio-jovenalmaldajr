@@ -890,44 +890,6 @@
     .run-body{ grid-template-columns: 1fr; }
   }
 
-  /* ---------- PROCESS ---------- */
-  .process-list{
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .process-step{
-    padding: 26px 22px;
-    border-right: 1px solid var(--line);
-    background: var(--bg-card);
-  }
-  .process-step:last-child{ border-right: none; }
-  .process-step .step-num{
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--amber);
-    margin-bottom: 12px;
-  }
-  .process-step h3{
-    font-family: var(--display);
-    font-size: 15.5px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .process-step p{ font-size: 13px; color: var(--ink-dim); }
-  @media (max-width: 900px){
-    .process-list{ grid-template-columns: 1fr 1fr; }
-    .process-step:nth-child(2){ border-right:none; }
-  }
-  @media (max-width: 560px){
-    .process-list{ grid-template-columns: 1fr; }
-    .process-step{ border-right:none; border-bottom: 1px solid var(--line); }
-    .process-step:last-child{ border-bottom:none; }
-  }
-
   /* ---------- CONTACT (terminal) ---------- */
   .contact-grid{
     display:grid;
